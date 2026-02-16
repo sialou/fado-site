@@ -1,0 +1,164 @@
+/* HERO */
+.contact-hero {
+  position: relative;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomSlow 20s infinite alternate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30,136,200,0.85),
+    rgba(15,76,117,0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* SECTION */
+.section {
+  padding: 6rem 2rem;
+  background: #F5F7FA;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* FORM */
+.contact-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+  color: #0F4C75;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1E88C8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30,136,200,0.2);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #1E88C8, #0F4C75);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 40px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* INFO */
+.contact-info {
+  background: linear-gradient(135deg, #0F4C75, #1E88C8);
+  padding: 3rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.contact-info h2 {
+  margin-bottom: 2rem;
+}
+
+.info-box {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomSlow {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    height: auto;
+    padding: 5rem 2rem;
+  }
+}

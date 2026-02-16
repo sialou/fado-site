@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* RESET GLOBAL */
+:root {
+  --primary-blue: #0F4C75;
+  --light-blue: #1E88C8;
+  --accent-yellow: #F4C430;
+  --accent-yellow-dark: #e0b020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}

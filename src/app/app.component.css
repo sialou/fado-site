@@ -1,0 +1,187 @@
+/* ================= HEADER ================= */
+
+/* ================= HEADER ================= */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  transition: 0.4s ease;
+
+  /* Dégradé logo */
+  background: linear-gradient(
+    135deg,
+    #0F4C75,
+    #1E88C8,
+    #2EC4B6
+  );
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Effet au scroll */
+.topbar.scrolled {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    135deg,
+    rgba(15,76,117,0.95),
+    rgba(30,136,200,0.95),
+    rgba(46,196,182,0.95)
+  );
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 42px;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* ACTIVE LINK */
+.nav a.active {
+  background: white;
+  color: #0F4C75;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* BOUTON SOUTENIR */
+.btn-donate {
+  background: white;
+  color: #0F4C75;
+  padding: 0.7rem 1.6rem;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-donate:hover {
+  background: #2EC4B6;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .nav {
+    display: none;
+  }
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: linear-gradient(135deg, #0F4C75, #1E88C8);
+  color: white;
+  padding: 4rem 2rem 2rem;
+ 
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.footer-brand img {
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.footer-links a,
+.footer-contact p {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 40px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #0F4C75;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px){
+
+  .nav {
+    display: none;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

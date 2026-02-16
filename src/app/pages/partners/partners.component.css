@@ -1,0 +1,184 @@
+/* ================= HERO ================= */
+
+.partners-hero {
+  position: relative;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+.partners-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomSlow 25s infinite alternate;
+  z-index: 0;
+}
+
+.partners-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15,76,117,0.9),
+    rgba(30,136,200,0.85)
+  );
+  z-index: 1;
+}
+
+/* Halo jaune décoratif */
+.partners-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #F4C430 0%, transparent 70%);
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ================= INTRO ================= */
+
+.section {
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro {
+  background: #F9FBFD;
+}
+
+.intro h2 {
+  color: #0F4C75;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Soulignement jaune */
+.intro h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #F4C430;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 5px;
+}
+
+/* ================= PARTNERS GRID ================= */
+
+.partners-section {
+  background: linear-gradient(135deg, #0F4C75, #1E88C8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet vague jaune subtil */
+.partners-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #F4C430 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= CARD ================= */
+
+.partner-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-bottom: 4px solid #F4C430;
+}
+
+.partner-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+.partner-card img {
+  max-height: 60px;
+  transition: 0.4s;
+  filter: grayscale(100%);
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATION ================= */
+
+.fade-in {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomSlow {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px){
+  .partners-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partners-hero {
+    height: auto;
+    padding: 5rem 2rem;
+  }
+}

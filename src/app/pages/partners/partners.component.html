@@ -1,0 +1,49 @@
+<!-- HERO -->
+<section class="partners-hero">
+
+  <img src="assets/partners-hero.jpg"
+       class="hero-bg"
+       alt="Partenaires FADO">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content fade-in">
+    <h1>Nos Partenaires</h1>
+    <p>
+      Ensemble, nous construisons un impact durable au service
+      des communautés vulnérables.
+    </p>
+  </div>
+
+</section>
+
+<!-- SECTION INTRO -->
+<section class="section intro">
+  <div class="container">
+    <h2>Un réseau engagé pour le développement</h2>
+    <p>
+      La Fondation FADO collabore avec des institutions sanitaires,
+      organisations sociales et partenaires techniques engagés
+      pour améliorer les conditions de vie en Côte d’Ivoire.
+    </p>
+  </div>
+</section>
+
+<!-- LOGOS GRID -->
+<section class="section partners-section">
+
+  <div class="partners-container">
+
+    <a *ngFor="let p of data.partners"
+       class="partner-card"
+       [href]="p.url"
+       target="_blank"
+       rel="noopener">
+
+      <img [src]="p.logo" [alt]="p.name">
+
+    </a>
+
+  </div>
+
+</section>

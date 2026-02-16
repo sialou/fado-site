@@ -1,0 +1,70 @@
+<!-- HERO AVEC IMAGE -->
+<section class="projects-hero">
+
+  <img src="assets/projects-hero.jpg" class="hero-bg" alt="Projets FADO">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content fade-in">
+    <h1>Nos Projets & Missions</h1>
+    <p>
+      Découvrez l’impact de nos actions depuis 2021.
+    </p>
+  </div>
+
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+
+  <div *ngFor="let group of projects" class="year-block">
+
+    <div class="year">{{ group.year }}</div>
+
+    <div *ngFor="let project of group.items"
+         class="project-card"
+         (click)="toggle(project)"
+         [class.active]="activeProject === project">
+
+      <div class="project-header">
+        <h3>{{ project.title }}</h3>
+        <span>{{ project.date }}</span>
+      </div>
+
+      <p class="location">{{ project.location }}</p>
+
+   <div class="project-details" *ngIf="activeProject === project">
+
+  <!-- SLIDER -->
+  <div class="slider">
+
+    <button class="nav-btn left"
+            (click)="prevImage(project); $event.stopPropagation()">
+      ‹
+    </button>
+
+    <img [src]="project.images[project.currentImage]"
+         alt="Image projet">
+
+    <button class="nav-btn right"
+            (click)="nextImage(project); $event.stopPropagation()">
+      ›
+    </button>
+
+  </div>
+
+  <!-- ACTIVITÉS -->
+  <ul>
+    <li *ngFor="let act of project.activities">
+      ✔ {{ act }}
+    </li>
+  </ul>
+
+</div>
+
+
+    </div>
+
+  </div>
+
+</section>

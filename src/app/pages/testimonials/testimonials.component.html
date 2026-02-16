@@ -1,1 +1,46 @@
-<p>testimonials works!</p>
+<!-- HERO IMAGE -->
+<section class="testimonials-hero">
+
+  <img src="assets/testimonials-hero.jpeg"
+       class="hero-bg"
+       alt="Bénéficiaires FADO">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content fade-in">
+    <h1>Témoignages</h1>
+    <p>
+      Les voix de ceux que nous accompagnons témoignent de l’impact
+      réel des actions de la Fondation FADO.
+    </p>
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS GRID -->
+<section class="section testimonials-section">
+
+  <div class="testimonials-container">
+
+    <div class="testimonial-card"
+         *ngFor="let t of data.testimonials">
+
+      <div class="quote-icon">“</div>
+
+      <p class="testimonial-text">
+        {{ t.text }}
+      </p>
+
+      <div class="testimonial-author">
+        <div class="avatar"></div>
+        <div>
+          <strong>{{ t.name }}</strong>
+          <span>{{ t.role }}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

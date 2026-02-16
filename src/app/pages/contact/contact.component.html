@@ -1,0 +1,88 @@
+<!-- HERO -->
+<section class="contact-hero">
+
+  <img src="assets/contact-hero.jpg"
+       class="hero-bg"
+       alt="Contact FADO">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content fade-in">
+    <h1>Contactez-nous</h1>
+    <p>
+      Ensemble, construisons un avenir meilleur pour les communautés vulnérables.
+    </p>
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact-section">
+
+  <div class="contact-container">
+
+    <!-- FORM -->
+    <div class="contact-form">
+
+      <h2>Envoyez-nous un message</h2>
+
+      <form (ngSubmit)="submitForm()">
+
+        <input type="text"
+               placeholder="Votre nom"
+               [(ngModel)]="contactData.name"
+               name="name"
+               required>
+
+        <input type="email"
+               placeholder="Votre email"
+               [(ngModel)]="contactData.email"
+               name="email"
+               required>
+
+        <input type="text"
+               placeholder="Sujet"
+               [(ngModel)]="contactData.subject"
+               name="subject">
+
+        <textarea placeholder="Votre message"
+                  rows="5"
+                  [(ngModel)]="contactData.message"
+                  name="message"
+                  required></textarea>
+
+        <button type="submit">Envoyer le message</button>
+
+      </form>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info">
+
+      <h2>Nos Coordonnées</h2>
+
+      <div class="info-box">
+        📍 Côte d’Ivoire
+      </div>
+
+      <div class="info-box">
+        📧 contact@fado.ci
+      </div>
+
+      <div class="info-box">
+        📞 +225 XX XX XX XX
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Abidjan&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

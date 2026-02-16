@@ -1,0 +1,179 @@
+/* HERO */
+/* ================= HERO ================= */
+
+.projects-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* important */
+}
+
+/* Image de fond */
+.projects-hero img.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay */
+.projects-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15,76,117,0.85),
+    rgba(30,136,200,0.85)
+  );
+  z-index: 1;
+}
+
+/* Texte */
+.projects-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+
+/* TIMELINE */
+.timeline {
+  padding: 5rem 2rem;
+  background: #F5F7FA;
+}
+
+.year-block {
+  margin-bottom: 4rem;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0F4C75;
+  margin-bottom: 2rem;
+  border-left: 5px solid #1E88C8;
+  padding-left: 1rem;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card.active {
+  border: 2px solid #1E88C8;
+}
+
+/* HEADER */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: #0F4C75;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* DETAILS */
+.project-details {
+  margin-top: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.project-details ul {
+  padding-left: 1rem;
+}
+
+.project-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 250px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeSlide 0.5s ease;
+  border-radius: 15px;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #1E88C8;
+}
+
+.left {
+  left: 15px;
+}
+
+.right {
+  right: 15px;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

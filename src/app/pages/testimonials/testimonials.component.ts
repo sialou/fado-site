@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DataService } from '../../core/data.service';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [],
-  templateUrl: './testimonials.html',
-  styleUrl: './testimonials.css'
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './testimonials.component.html',
+  styleUrls: ['./testimonials.component.css']
 })
-export class Testimonials {
-
+export class TestimonialsPageComponent {
+  constructor(public data: DataService) {}
 }

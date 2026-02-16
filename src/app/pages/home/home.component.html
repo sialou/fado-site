@@ -1,0 +1,90 @@
+<!-- HERO PREMIUM -->
+<!-- HERO PREMIUM -->
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content fade-up">
+    <h1>{{ data.site.hero.title }}</h1>
+    <p>{{ data.site.hero.subtitle }}</p>
+
+    <div class="hero-buttons">
+      <a *ngFor="let cta of data.site.hero.ctas"
+         [routerLink]="cta.link"
+         class="btn-primary">
+        {{ cta.label }}
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- IMPACT WITH COUNTER -->
+<section class="section impact">
+
+  <div class="impact-container">
+
+    <!-- TEXTE & STATS -->
+    <div class="impact-content fade-left">
+      <h2 class="section-title">Notre impact</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of data.stats">
+          <h3 class="counter">{{ stat.displayValue }}</h3>
+          <p>{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="impact-image fade-right">
+      <img src="assets/impact.jpeg" alt="Impact FADO" style="margin-top: 150px">
+      <div class="impact-overlay"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PROJECTS SECTION -->
+<section class="section featured-projects">
+
+  <div class="projects-container">
+
+    <!-- IMAGE -->
+    <div class="projects-image">
+      <img src="assets/images/home-projects.jpeg" alt="Actions humanitaires FADO">
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="projects-content">
+
+      <h2>Nos Projets & Missions Humanitaires</h2>
+
+      <p>
+        Depuis 2021, la Fondation FADO mène des actions concrètes
+        dans les domaines de la santé, de l’éducation et de
+        l’accompagnement social à travers plusieurs localités
+        en Côte d’Ivoire.
+      </p>
+
+      <p>
+        Découvrez nos missions communautaires, nos campagnes
+        médicales et nos actions solidaires qui ont déjà impacté
+        des milliers de bénéficiaires.
+      </p>
+
+      <a routerLink="/projets" class="projects-btn">
+        Voir tous nos projets →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+

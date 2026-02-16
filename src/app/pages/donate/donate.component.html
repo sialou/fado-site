@@ -1,0 +1,94 @@
+<!-- HERO -->
+<section class="donate-hero">
+
+  <img src="assets/donate-hero.jpg"
+       class="hero-bg"
+       alt="Soutenir FADO">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content fade-in">
+    <h1>Faire un Don</h1>
+    <p>
+      Chaque contribution change une vie.
+      Ensemble, soutenons les communautés vulnérables.
+    </p>
+  </div>
+
+</section>
+
+<!-- IMPACT SECTION -->
+<section class="section impact-section">
+
+  <div class="impact-container">
+
+    <div class="impact-text">
+      <h2>Votre don a un impact réel</h2>
+      <p>
+        Grâce à votre soutien, la Fondation FADO développe
+        des actions concrètes dans les domaines de la santé,
+        de l'accompagnement social et du soutien aux familles
+        vulnérables en Côte d’Ivoire.
+      </p>
+    </div>
+
+    <div class="impact-image">
+      <img src="assets/donate-impact.jpg" alt="Impact Fondation FADO">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DONATION FORM -->
+<section class="section donation-section">
+
+  <div class="donation-card">
+
+    <h2>Soutenez notre mission</h2>
+
+    <!-- AMOUNTS -->
+    <div class="amounts">
+      <button (click)="selectAmount(5000)"
+              [class.active]="selectedAmount === 5000">5 000 FCFA</button>
+
+      <button (click)="selectAmount(10000)"
+              [class.active]="selectedAmount === 10000">10 000 FCFA</button>
+
+      <button (click)="selectAmount(25000)"
+              [class.active]="selectedAmount === 25000">25 000 FCFA</button>
+
+      <button (click)="selectAmount(50000)"
+              [class.active]="selectedAmount === 50000">50 000 FCFA</button>
+    </div>
+
+    <!-- FORM -->
+    <form (ngSubmit)="submitDonation()">
+
+      <input type="text"
+             placeholder="Votre nom"
+             [(ngModel)]="donation.name"
+             name="name"
+             required>
+
+      <input type="email"
+             placeholder="Votre email"
+             [(ngModel)]="donation.email"
+             name="email"
+             required>
+
+      <input type="number"
+             placeholder="Montant personnalisé"
+             [(ngModel)]="donation.amount"
+             name="amount"
+             required>
+
+      <button type="submit" class="donate-btn">
+        Faire un don 💙
+      </button>
+
+    </form>
+
+  </div>
+
+</section>

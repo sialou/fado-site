@@ -1,0 +1,66 @@
+<!-- HEADER -->
+<header class="topbar" [class.scrolled]="scrolled">
+
+  <a class="brand" routerLink="/">
+    <img src="assets/images/logo1.png" alt="Logo FADO">
+ 
+  </a>
+
+  <nav class="nav">
+    <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
+    <a routerLink="/projets" routerLinkActive="active">Projets</a>
+    <a routerLink="/temoignages" routerLinkActive="active">Témoignages</a>
+    <a routerLink="/partenaires" routerLinkActive="active">Partenaires</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+
+  <a class="btn-donate" routerLink="/soutenir">Soutenir</a>
+
+</header>
+
+
+<main class="content">
+  <router-outlet />
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="assets/images/logo1.png" alt="Logo FADO">
+      <h3>Fondation FADO</h3>
+      <p>
+        Agir localement pour un impact durable
+        au service des communautés vulnérables.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4 style="margin-bottom: 20px;">Navigation</h4>
+      <a routerLink="/">Accueil</a>
+      <a routerLink="/a-propos">À propos</a>
+      <a routerLink="/projets">Projets</a>
+      <a routerLink="/actualites">Actualités</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p style="margin-top: 20px;">📍 Abidjan, Côte d’Ivoire</p>
+      <p>📧 contact@fondation-fado.org</p>
+    </div>
+
+    <div class="footer-cta">
+      <h4>Agissez</h4>
+      <p style="margin-top: 20px;"><a class="btn-donate" routerLink="/soutenir">Faire un don</a></p>
+      
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © {{ currentYear }} FADO — Tous droits réservés.
+  </div>
+
+</footer>
