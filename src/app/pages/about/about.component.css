@@ -247,3 +247,75 @@ h2::after {
   }
 
 }
+
+/* ================= VISION ================= */
+
+.vision-section .lead {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.vision-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.vision-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-bottom: 4px solid #F4C430;
+  transition: 0.4s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ================= CREDO ================= */
+
+.credo-section {
+  background: linear-gradient(135deg, #0F4C75, #1E88C8);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.credo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #F4C430 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+.credo-container {
+  position: relative;
+  z-index: 2;
+}
+
+.credo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .vision-points {
+    grid-template-columns: 1fr;
+  }
+
+  .credo-text {
+    font-size: 1.5rem;
+  }
+}
+

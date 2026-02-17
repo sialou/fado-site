@@ -11,16 +11,33 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactPageComponent {
 
-  contactData = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
+contactData = {
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+};
 
-  submitForm() {
-    console.log(this.contactData);
-    alert('Message envoyé avec succès !');
+sendContactEmail(form: any) {
+
+  if (!form.valid) {
+    alert("Veuillez remplir correctement tous les champs.");
+    return;
   }
+
+  const subject = `Contact - ${this.contactData.subject}`;
+
+  const body = `
+Nom : ${this.contactData.name}
+Email : ${this.contactData.email}
+
+Message :
+${this.contactData.message}
+  `;
+
+  window.location.href =
+    `mailto:contact@fondation-fado.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 
 }

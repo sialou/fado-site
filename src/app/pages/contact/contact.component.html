@@ -26,35 +26,42 @@
 
       <h2>Envoyez-nous un message</h2>
 
-      <form (ngSubmit)="submitForm()">
+     <form #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
 
-        <input type="text"
-               placeholder="Votre nom"
-               [(ngModel)]="contactData.name"
-               name="name"
-               required>
+  <input type="text"
+         placeholder="Votre nom"
+         [(ngModel)]="contactData.name"
+         name="name"
+         required
+         #name="ngModel">
 
-        <input type="email"
-               placeholder="Votre email"
-               [(ngModel)]="contactData.email"
-               name="email"
-               required>
+  <input type="email"
+         placeholder="Votre email"
+         [(ngModel)]="contactData.email"
+         name="email"
+         required
+         email
+         #email="ngModel">
 
-        <input type="text"
-               placeholder="Sujet"
-               [(ngModel)]="contactData.subject"
-               name="subject">
+  <input type="text"
+         placeholder="Sujet"
+         [(ngModel)]="contactData.subject"
+         name="subject"
+         required>
 
-        <textarea placeholder="Votre message"
-                  rows="5"
-                  [(ngModel)]="contactData.message"
-                  name="message"
-                  required></textarea>
+  <textarea placeholder="Votre message"
+            rows="5"
+            [(ngModel)]="contactData.message"
+            name="message"
+            required
+            #message="ngModel"></textarea>
 
-        <button type="submit">Envoyer le message</button>
+  <button type="submit"
+          >
+    Envoyer le message
+  </button>
 
-      </form>
-
+</form>
     </div>
 
     <!-- INFO -->
@@ -67,11 +74,11 @@
       </div>
 
       <div class="info-box">
-        📧 contact@fado.ci
+        📧 contact@fondation-fado.org
       </div>
 
       <div class="info-box">
-        📞 +225 XX XX XX XX
+        📞 +225 +225 07 07 60 95 47
       </div>
 
       <div class="map-container">

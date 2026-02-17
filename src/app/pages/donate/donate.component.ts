@@ -13,20 +13,47 @@ export class DonatePageComponent {
 
   selectedAmount: number = 0;
 
-  donation = {
-    name: '',
-    email: '',
-    amount: 0
-  };
 
-  selectAmount(amount: number) {
-    this.selectedAmount = amount;
-    this.donation.amount = amount;
+donation = {
+  name: '',
+  phone: '',
+  amount: null
+};
+
+sendEmail() {
+
+  if (!this.donation.name || 
+      !this.donation.phone || 
+      !this.donation.amount) {
+
+    alert("Veuillez remplir tous les champs avant d’envoyer votre demande.");
+    return;
   }
 
-  submitDonation() {
-    console.log(this.donation);
-    alert('Merci pour votre soutien 💙');
+  if (this.donation.amount <= 0) {
+    alert("Veuillez entrer un montant valide.");
+    return;
   }
+
+  const phoneRegex = /^[0-9+\s]{8,15}$/;
+
+  if (!phoneRegex.test(this.donation.phone)) {
+    alert("Veuillez entrer un numéro de téléphone valide.");
+    return;
+  }
+
+  const subject = "Demande de don - Fondation FADO";
+
+  const body = `
+Nom : ${this.donation.name}
+Téléphone : ${this.donation.phone}
+Montant souhaité : ${this.donation.amount} FCFA
+  `;
+
+  window.location.href =
+    `mailto:contact@fondation-fado.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+
 
 }

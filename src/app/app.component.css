@@ -174,14 +174,41 @@
 
 /* ================= RESPONSIVE ================= */
 
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
 @media(max-width: 900px){
 
-  .nav {
+  .menu-toggle {
+    display: block;
+  }
+
+  .btn-donate {
     display: none;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0F4C75, #1E88C8);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    display: none;
+  }
+
+  .nav.mobile-open {
+    display: flex;
   }
 
 }
+

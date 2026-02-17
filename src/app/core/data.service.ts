@@ -33,10 +33,10 @@ export class DataService {
   };
 
   stats: Stat[] = [
-    { label: 'Bénéficiaires atteints', value: 25000, displayValue: 0 },
-    { label: 'Projets réalisés', value: 85, displayValue: 0 },
-    { label: 'Volontaires', value: 300, displayValue: 0 },
-    { label: 'Villes couvertes', value: 12, displayValue: 0 }
+    { label: 'Bénéficiaires atteints', value: 2356, displayValue: 0 },
+    { label: 'Projets réalisés', value: 14, displayValue: 0 },
+    { label: 'Volontaires', value: 50, displayValue: 0 },
+    { label: 'Villes couvertes', value: 7, displayValue: 0 }
   ];
 
   projects: Project[] = [
@@ -70,8 +70,10 @@ export class DataService {
   ];
 
   partners = [
-    { name: 'Ministère de l\'Éducation', logo: 'assets/images/partner-minedu.png', url: '#' },
-    { name: 'Association locale', logo: 'assets/images/partner-local.png', url: '#' }
+    { name: 'Ministère de la santé de l’hygiène publique et de la couverture maladie universelle', logo: 'assets/partner-minedu.jpeg', url: '#' },
+    { name: 'PNLCa', logo: 'assets/partner-pnlca.jpg', url: '#' },
+    { name: 'SUN PHARMA', logo: 'assets/PHARMA.png', url: '#' },
+    { name: 'BDA PHARMA', logo: 'assets/BDA.png', url: '#' }
   ];
 
   getProjectBySlug(slug: string) {

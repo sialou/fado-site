@@ -41,29 +41,57 @@
 </section>
 
 <!-- DONATION FORM -->
+<!--<section class="section donation-info">
+
+  <div class="donation-info-card">
+
+    <h2>Comment faire un don ?</h2>
+
+    <p>
+      Pour effectuer un don, veuillez nous envoyer un email
+      en précisant le montant que vous souhaitez offrir ainsi
+      que votre numéro de téléphone.
+    </p>
+
+    <p>
+      Notre équipe vous contactera rapidement afin de vous
+      accompagner pour la réception de votre contribution.
+    </p>
+
+    <div class="contact-box">
+      <strong>Email :</strong>
+      <a href="mailto:contact@fondation-fado.org">
+        contact@fondation-fado.org
+      </a>
+    </div>
+
+    <div class="mobile-money-box">
+      <h3>Ou faites un transfert direct via Mobile Money :</h3>
+
+      <p><strong>Wave :</strong> +225 07 60 95 47</p>
+      <p><strong>Orange Money :</strong> +225 07 60 95 47</p>
+    </div>
+
+  </div>
+
+</section>-->
 <section class="section donation-section">
 
   <div class="donation-card">
+     <p>
+      Pour effectuer un don, veuillez nous envoyer un email
+      en précisant le montant que vous souhaitez offrir ainsi
+      que votre numéro de téléphone.
+    </p>
 
-    <h2>Soutenez notre mission</h2>
+    <p>
+      Notre équipe vous contactera rapidement afin de vous
+      accompagner pour la réception de votre contribution.
+    </p>
 
-    <!-- AMOUNTS -->
-    <div class="amounts">
-      <button (click)="selectAmount(5000)"
-              [class.active]="selectedAmount === 5000">5 000 FCFA</button>
+    <h2>Envoyer une demande de don</h2>
 
-      <button (click)="selectAmount(10000)"
-              [class.active]="selectedAmount === 10000">10 000 FCFA</button>
-
-      <button (click)="selectAmount(25000)"
-              [class.active]="selectedAmount === 25000">25 000 FCFA</button>
-
-      <button (click)="selectAmount(50000)"
-              [class.active]="selectedAmount === 50000">50 000 FCFA</button>
-    </div>
-
-    <!-- FORM -->
-    <form (ngSubmit)="submitDonation()">
+    <form #donForm="ngForm">
 
       <input type="text"
              placeholder="Votre nom"
@@ -71,20 +99,22 @@
              name="name"
              required>
 
-      <input type="email"
-             placeholder="Votre email"
-             [(ngModel)]="donation.email"
-             name="email"
+      <input type="tel"
+             placeholder="Votre numéro de téléphone"
+             [(ngModel)]="donation.phone"
+             name="phone"
              required>
 
       <input type="number"
-             placeholder="Montant personnalisé"
+             placeholder="Montant souhaité (FCFA)"
              [(ngModel)]="donation.amount"
              name="amount"
              required>
 
-      <button type="submit" class="donate-btn">
-        Faire un don 💙
+      <button type="button"
+              class="donate-btn"
+              (click)="sendEmail()">
+        Envoyer ma demande
       </button>
 
     </form>
@@ -92,3 +122,4 @@
   </div>
 
 </section>
+

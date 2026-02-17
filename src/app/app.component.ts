@@ -18,5 +18,15 @@ export class AppComponent {
   onScroll() {
     this.scrolled = window.scrollY > 50;
   }
+  menuOpen = false;
+
+toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+}
+
+closeMenu() {
+  this.menuOpen = false;
+}
+
 
 }
