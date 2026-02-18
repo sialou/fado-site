@@ -15,6 +15,10 @@
 
 <!-- TIMELINE -->
 <section class="timeline">
+  <div class="projects-hint">
+  Cliquez sur chaque projet pour visualiser les photos et les activités réalisées.
+</div>
+
 
   <div *ngFor="let group of projects" class="year-block">
 
@@ -53,11 +57,20 @@
   </div>
 
   <!-- ACTIVITÉS -->
-  <ul>
-    <li *ngFor="let act of project.activities">
-      ✔ {{ act }}
-    </li>
-  </ul>
+ <div class="project-activities">
+
+  <h4>Actions réalisées</h4>
+
+  <div class="activities-grid">
+    <div class="activity-item"
+         *ngFor="let act of project.activities">
+      <span class="check">✔</span>
+      <span class="text">{{ act }}</span>
+    </div>
+  </div>
+
+</div>
+
 
 </div>
 

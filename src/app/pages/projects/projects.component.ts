@@ -75,9 +75,9 @@ export class ProjectsPageComponent {
           date: "10 Décembre 2022",
           activities: [
             "Distribution cadeaux",
-            "Dons kits médicaux",
-            "Produits d’entretien",
-            "Don de draps"
+            "Dons de kits médicaux",
+            "Dons de Produits d’entretien",
+            "Dons de draps"
           ],
           images: [
             "assets/acte221.jpg",
@@ -93,8 +93,8 @@ export class ProjectsPageComponent {
           activities: [
             "Distribution cadeaux",
             "Dons kits médicaux",
-            "Produits d’entretien",
-            "Don de draps"
+            "Dons de Produits d’entretien",
+            "Dons de draps"
           ],
           images: [
             "assets/acte21.jpg",
@@ -115,13 +115,13 @@ export class ProjectsPageComponent {
           location: "Gabriel Dadié Koumassi",
           date: "20 Octobre 2023",
           activities: [
-            "100 kits scolaires",
+            "100 kits scolaires distribués",
             "150 sacs distribués"
           ],
           images: [
-            "assets/gabriel1.jpg",
-            "assets/gabriel2.jpg",
-            "assets/gabriel3.jpg"
+            "assets/gabriel1.jpeg",
+            "assets/gabriel2.jpeg",
+            "assets/gabriel3.jpeg"
           ],
           currentImage: 0
         
@@ -160,8 +160,8 @@ export class ProjectsPageComponent {
           ],
           images: [
             "assets/samaritain1.jpg",
-            "assets/Samaritain2.jpg",
-            "assets/Samaritain3.jpg"
+            "assets/samaritain2.jpg",
+            "assets/samaritain3.jpg"
           ],
           currentImage: 0
         
@@ -174,7 +174,7 @@ export class ProjectsPageComponent {
           activities: [
             "Cadeaux enfants hospitalisés",
             "Dons médicaux",
-            "Don de produits d’entretien",
+            "Dons de produits d’entretien",
             "Denrées alimentaires"
           ],
           images: [
@@ -287,8 +287,8 @@ export class ProjectsPageComponent {
           activities: [
             "45 femmes dépistées cancer col",
             "300 dépistages diabète",
-            "1000+ vêtements distribués",
-            "300+ chaussures",
+            "+1000 vêtements distribués",
+            "+300 chaussures",
             "300 déparasitants distribués",
             "50 cadeaux et jouets distribués aux enfants"
           ],
