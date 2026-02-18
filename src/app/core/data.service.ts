@@ -73,7 +73,8 @@ export class DataService {
     { name: 'Ministère de la santé de l’hygiène publique et de la couverture maladie universelle', logo: 'assets/partner-minedu.jpeg', url: '#' },
     { name: 'PNLCa', logo: 'assets/partner-pnlca.jpg', url: '#' },
     { name: 'SUN PHARMA', logo: 'assets/PHARMA.png', url: '#' },
-    { name: 'BDA PHARMA', logo: 'assets/BDA.png', url: '#' }
+    { name: 'BDA PHARMA', logo: 'assets/BDA.png', url: '#' },
+    { name: 'Biolab SA', logo: 'assets/iolab.jpg', url: '#' }
   ];
 
   getProjectBySlug(slug: string) {

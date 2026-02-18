@@ -39,9 +39,9 @@ export class ProjectsPageComponent {
             "Moment festif avec le père Noël"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/BETHLEEM1.jpg",
+            "assets/BETHLEEM2.jpg",
+            "assets/BETHLEEM3.jpg"
           ],
           currentImage: 0
         },
@@ -62,9 +62,9 @@ export class ProjectsPageComponent {
             "Distribution vêtements"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/kodje1.jpg",
+            "assets/kodje2.jpg",
+            "assets/kodje3.jpg"
           ],
           currentImage: 0
       
@@ -80,9 +80,9 @@ export class ProjectsPageComponent {
             "Don de draps"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/acte221.jpg",
+            "assets/acte222.jpg",
+            "assets/acte223.jpg"
           ],
           currentImage: 0
         },
@@ -97,9 +97,9 @@ export class ProjectsPageComponent {
             "Don de draps"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/acte21.jpg",
+            "assets/acte22.jpg",
+            "assets/acte23.jpg"
           ],
           currentImage: 0
         },
@@ -159,9 +159,9 @@ export class ProjectsPageComponent {
             "Autonomie & sécurité"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/samaritain1.jpg",
+            "assets/Samaritain2.jpg",
+            "assets/Samaritain3.jpg"
           ],
           currentImage: 0
         
@@ -178,9 +178,9 @@ export class ProjectsPageComponent {
             "Denrées alimentaires"
           ],
           images: [
-            "assets/projects/kodje1.jpg",
-            "assets/projects/kodje2.jpg",
-            "assets/projects/kodje3.jpg"
+            "assets/acte41.jpg",
+            "assets/acte42.jpg",
+            "assets/acte43.jpg"
           ],
           currentImage: 0
         

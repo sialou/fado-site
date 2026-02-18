@@ -11,9 +11,13 @@
   </div>
 
   <nav class="nav" [class.mobile-open]="menuOpen">
+    <a routerLink="/" routerLinkActive="active"[routerLinkActiveOptions]="{ exact: true }"
+   (click)="closeMenu()">
+   Accueil</a>
+
     <a routerLink="/a-propos" routerLinkActive="active" (click)="closeMenu()">À propos</a>
     <a routerLink="/projets" routerLinkActive="active" (click)="closeMenu()">Projets</a>
-    <a routerLink="/temoignages" routerLinkActive="active" (click)="closeMenu()">Témoignages</a>
+    <!--<a routerLink="/temoignages" routerLinkActive="active" (click)="closeMenu()">Témoignages</a>-->
     <a routerLink="/partenaires" routerLinkActive="active" (click)="closeMenu()">Partenaires</a>
     <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
   </nav>
@@ -44,9 +48,10 @@
 
     <div class="footer-links">
       <h4 style="margin-bottom: 20px;">Navigation</h4>
+   <a routerLink="/" routerLinkActive="active" >Accueil</a>
    <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
     <a routerLink="/projets" routerLinkActive="active">Projets</a>
-    <a routerLink="/temoignages" routerLinkActive="active">Témoignages</a>
+   <!-- <a routerLink="/temoignages" routerLinkActive="active">Témoignages</a>-->
     <a routerLink="/partenaires" routerLinkActive="active">Partenaires</a>
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </div>
